@@ -9,17 +9,19 @@ import {
 import { Home } from "./pages/home/Home";
 import { Login } from "./pages/login/Login";
 import { Register } from "./pages/register/Register";
-  
+import { Profile } from "./pages/profile/Profile";
 
 
 
 function App() {
+    const currentUser = true;
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<Home />}/>
+                <Route path="/" element={currentUser ? <Home /> : <Login />}/>
                 <Route path="/login" element={<Login />}/>
                 <Route path="/register" element={<Register />}/>
+                <Route path="/profile/:id" element={<Profile />}/>
             </Routes>
         </Router>
     );
