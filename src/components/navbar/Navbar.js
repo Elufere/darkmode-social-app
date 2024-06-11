@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import "./navbar.scss";
 import { IoHomeOutline } from "react-icons/io5";
 import { IoMoonOutline } from "react-icons/io5";
@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom';
 import { IoPersonOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
+import { AuthContext } from '../../context/authContext';
 
 
 
 export function Navbar() {
     
+    const {currentUser} = useContext(AuthContext);
 
     return (
         <div className='navbar'>
@@ -33,8 +35,8 @@ export function Navbar() {
                 <CiMail />
                 <IoHomeOutline />
                 <div className='user'>
-                    <img src='https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600' alt=''/>
-                    <span>John Doe</span>
+                    <img src={currentUser.profilePic}/>
+                    <span>{currentUser.name}</span>
                 </div>
             </div>
         </div>
