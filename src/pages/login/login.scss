@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .login {
     height: 100vh;
     background-color: rgb(193, 190, 255);
@@ -24,6 +25,10 @@
         flex-direction: column;
         gap: 30px;
         color: white;
+
+        @include mobile{
+          display: none;
+        }
   
         h1 {
           font-size: 100px;

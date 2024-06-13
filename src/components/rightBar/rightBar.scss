@@ -1,12 +1,17 @@
+@import "../../App.scss";
+
 .rightBar{
     flex: 3;  
     height: calc(100vh - 70px );
     overflow-y: scroll;
     position: sticky;
     top: 70px;
-    // background-color: rgb(241, 245, 239);
 
     &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include mobile{
         display: none;
     }
 

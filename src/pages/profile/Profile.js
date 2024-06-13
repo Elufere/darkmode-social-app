@@ -9,6 +9,8 @@ import { TfiWorld } from "react-icons/tfi";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { LeftBar } from "../../components/leftBar/LeftBar";
 import { RightBar } from "../../components/rightBar/RightBar";
+import { Posts } from '../../components/posts/Posts';
+
 
 export function Profile() {  
     return (
@@ -50,6 +52,7 @@ export function Profile() {
                             </div>
                             <div className='center'>
                                 <span>Jane Doe</span>
+                                <div className='info'>
                                 <div className='item'>
                                     <MdPinDrop />
                                     <span>USA</span>
@@ -57,6 +60,7 @@ export function Profile() {
                                 <div className='item'>
                                     <TfiWorld />
                                     <span>Karo dev</span>
+                                </div>
                                 </div>
                                 <button>follow</button>
                             </div>
@@ -66,6 +70,7 @@ export function Profile() {
                             </div>
                         </div>
                     </div>
+                    <Posts />
                 </div>
                 <RightBar />
             </div>
